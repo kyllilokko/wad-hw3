@@ -1,5 +1,7 @@
 <template>
-    
+    <div id="gpa">
+        <strong>2.75</strong>
+    </div>
 </template>
 
 <script>
