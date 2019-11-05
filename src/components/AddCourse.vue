@@ -17,7 +17,7 @@
         data: () => {
             return {
                 selected: false,
-                course: String,
+                course: '',
                 semester: Number,
                 grade: Number
             }
@@ -25,10 +25,9 @@
         methods: {
             hideAddCourse: function () {
                 this.selected = false;
-                this.course='';
-                this.semester='';
-                this.grade=''
-
+                this.course = '';
+                this.semester = '';
+                this.grade = ''
             }
         }
     }
