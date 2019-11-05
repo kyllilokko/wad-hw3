@@ -11,7 +11,7 @@
                 </div>
                 <div class="controls">
                     <button :class="{'pill active' : selected, 'pill' : !selected}" @click="selected = !selected">
-                        <span >Profile</span>
+                        <span>Profile</span>
                     </button>
                     <button :class="{'pill active' : !selected, 'pill' : selected}" @click="selected = !selected">
                         <span>Courses</span>
@@ -42,10 +42,9 @@
         name: 'app',
         data: () => {
             return {
-                selected: true
+                selected: true,
             }
         },
-
         components: {
             Courses,
             Profile
@@ -190,7 +189,7 @@
         padding: 8px 12px;
         border: 1px solid #cbcbcb;
     }
-    
+
 
     .content .tab.active {
         display: block;

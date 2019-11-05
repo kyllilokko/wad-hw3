@@ -11,35 +11,18 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>1</td>
-                <td>Agile software development</td>
-                <td>1</td>
-                <td>82</td>
+            <tr v-for="(item, index) in courses" :key="index">
+                <td>{{index+1}}</td>
+                <td>{{item.course}}</td>
+                <td>{{item.semester}}</td>
+                <td>{{item.grade}}</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>System modeling</td>
-                <td>1</td>
-                <td>85</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Object-oriented programming</td>
-                <td>2</td>
-                <td>99</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Estonian language Level A2</td>
-                <td>2</td>
-                <td>65</td>
-            </tr>
+
             </tbody>
         </table>
         <br>
         <br>
-        <AddCourse/>
+        <AddCourse :add-course="addCourse"/>
     </div>
 </template>
 
@@ -47,7 +30,35 @@
     import AddCourse from "./AddCourse";
     export default {
         name: "Courses",
-        components: {AddCourse}
+        components: {AddCourse},
+        data: () => {
+            return {
+                courses: [
+                    {
+                        course: 'Agile software development',
+                        semester: 1,
+                        grade: 82
+                    },
+                    {
+                        course: 'System modelling',
+                        semester: 1,
+                        grade: 85
+                    }, {
+                        course: 'Object-oriented programming',
+                        semester: 2,
+                        grade: 99
+                    }, {
+                        course: 'Estonian language Level A2',
+                        semester: 2,
+                        grade: 65
+                    }]
+            }
+        },
+        methods: {
+            addCourse: function (course, semester, grade) {
+                this.courses.push({course: course, semester: semester , grade: grade});
+            }
+        }
     }
 </script>
 
