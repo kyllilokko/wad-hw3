@@ -243,7 +243,4 @@
         min-width: 135px;
     }
 
-    #add-course {
-        display: none;
-    }
 </style>
