@@ -11,7 +11,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="(item, index) in courses" :key="index">
+            <tr v-for="(item, index) in courses" :key="index" @click="addCourse">
                 <td>{{index+1}}</td>
                 <td>{{item.course}}</td>
                 <td>{{item.semester}}</td>
@@ -28,6 +28,7 @@
 
 <script>
     import AddCourse from "./AddCourse";
+    import {EventBus} from '../eventBus.js';
     export default {
         name: "Courses",
         components: {AddCourse},
@@ -57,7 +58,11 @@
         methods: {
             addCourse: function (course, semester, grade) {
                 this.courses.push({course: course, semester: semester , grade: grade});
+                EventBus.$emit('update-gpa', this.courses);
             }
+        },
+        created() {
+            EventBus.$emit('update-gpa', this.courses);
         }
     }
 </script>

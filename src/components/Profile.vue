@@ -11,17 +11,27 @@
                     <li id="faculty">Software Engineering</li>
                 </ul>
             </div>
-            <CalculateGPA/>
+            <div id="gpa">
+                <strong><CalculateGPA/></strong>
+            </div>
             <div class="clear-fix"></div>
         </div>
     </div>
 </template>
 
 <script>
+
     import CalculateGPA from "./CalculateGPA";
+
     export default {
         name: "Profile",
-        components: {CalculateGPA}
+        components: {CalculateGPA},
     }
 </script>
+
+<style>
+
+
+
+</style>
 

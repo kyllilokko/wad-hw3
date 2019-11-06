@@ -123,6 +123,24 @@
         margin: 0 auto;
     }
 
+    #gpa {
+        width: 20%;
+    }
+
+    #gpa strong {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto auto;
+        font-size: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+
     #profile {
         border-bottom: 1px dashed #a7a7a7;
         padding-bottom: 10px;
@@ -148,24 +166,6 @@
         width: 45%;
     }
 
-    #profile #gpa {
-        width: 20%;
-    }
-
-    #profile #gpa strong {
-        position: absolute;
-        width: 100%;
-        height: 60px;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto auto;
-        font-size: 60px;
-        line-height: 60px;
-        text-align: center;
-    }
-
     .content {
         padding: 10px;
         border: 1px solid #cbcbcb;
@@ -188,11 +188,6 @@
     table td {
         padding: 8px 12px;
         border: 1px solid #cbcbcb;
-    }
-
-
-    .content .tab.active {
-        display: block;
     }
 
     .controls .pill {
